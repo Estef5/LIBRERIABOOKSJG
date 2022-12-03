@@ -1,4 +1,162 @@
-html, body {
-  height: 100%;
+/* declarar unas variables de colores y fuentes */
+:root{
+    /* fuentes */
+    --titulos:'Lato', sans-serif;
+    --parrafos:'Roboto',sans-serif;
+    /* colores corporativos */
+    --encabezado:#ce8346;
+    --piepagina:#ce8346;
+    --enlace:#ffcccc;
+    --enlaceSobre:#ff9f38;
+
+}
+
+/* configuración global */
+h1,h2,h3,h4,h5,h6 {
+    font-family:var(--titulos);
+}
+
+/*selector universal en css es (*)*/
+*{
+  /*calcular mejor los padding o espaciados*/
+  box-sizing: border-box;
+}
+
+/*representacion de una clase en css es (.)*/
+.home-wrapper {
+ background-image: url('../images/background.jpg');
+  background-size:cover;
+}
+
+header{
   width: 100%;
+  background-color: var(--encabezado);
+  position: fixed;/*elemento fijo*/
+  padding-top: 8px;
+}
+
+header nav{
+  float: right;
+  margin-left: 5px;
+  padding: 10px 2px;
+}
+
+header img{
+  width: 200px;
+}
+
+header nav a{
+  color: var(--enlace);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover{
+  color: var(--enlaceSobre);
+}
+
+/*seccion home*/
+#home{
+  text-align: center;
+  padding: 250px 0 350px;
+  
+}
+
+#home h1{
+  font-size:3.0rem;
+  margin-bottom: 30px;
+}
+
+#home p{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+section{
+  padding-top: 80px;
+}
+
+section h2{
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+/*seccion novedades*/
+#novedades .box{
+  display: inline-block;
+  width: 33%;
+  padding: 5px;
+}
+
+#novedades .box p{
+  text-align: justify;
+}
+
+#novedades .box img{
+  padding-left: 30%;
+  padding-bottom: 10px ;
+}
+
+#novedades .box h3{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/*seccion categorias*/
+#categoria .box{
+    display: inline-block;
+    width: 33%;
+    padding: 2px;
+}
+
+#categoria .box img{
+    width: 100%;
+}
+
+#categoria .box h3{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#categoria .box p{
+    text-align: justify;
+}
+
+/* sección contacto */
+#contacto{
+    background-image: url('/images/map-image.png');
+    background-color: #775555;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+#contacto h2{
+    color: #ffffff;
+}
+
+#contacto textarea,input{
+    width: 500px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    color: #cdb1b1;
+    background-color: rgb(74, 8, 79);
+  
+}
+
+iframe{
+    margin: 15px 0 10px;
+}
+
+/* footer o pie de pag */
+footer{
+    width: 100%;
+    background-color: var(--piepagina);
+    color: #ffcccc; 
+    padding-top:20px;
+    padding-bottom:20px;
 }
